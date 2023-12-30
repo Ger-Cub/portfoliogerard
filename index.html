@@ -9,6 +9,18 @@
   
     <!-- ===== BOX ICONS===== -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
+    <!-- ===== FAVICON ===== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/site.webmanifest">
+    <link rel="mask-icon" href="./favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+
     
 </head>
 <body>
@@ -16,7 +28,9 @@
     <header class="l-header">
         <nav class="nav bd-grid">
             <div>
-                <a href="https://www.google.com/search?channel=fs&client=ubuntu&q=gerard+cubaka" class="nav__logo">Gérard.</a>
+                <a href="https://www.google.com/search?channel=fs&client=ubuntu&q=gerard+cubaka" class="nav__logo">
+                    <img style="width: 5rem;" src="./Image/logoGerard.png">
+                </a>
             </div>
 
             <div class="nav__menu" id="nav-menu">
@@ -30,7 +44,7 @@
             </div>
 
             <div class="nav__toggle" id="nav-toggle">
-                <i class='bx bx-menu' ></i>
+                <i class='bx bx-menu' style="font-size: 2rem;" ></i>
             </div>
         </nav>
     </header>
@@ -54,11 +68,55 @@
             </div>
 
             <div class="home__img">
-                <img src="./Image/sagesansfont.PNG" alt="image">
+                <img src="./Image/844cfa99-a63b-4b82-97bd-18025ec12500.png" alt="image">
             </div>
             <a href="./CV/CV_and_Montivation_English_Vesion.pdf" class="Downloadcv">Download CV <span><i class='bx bxs-download'></span></i></a>
 
         </section>
+
+        <!-- ===== CHAT BOT ==== -->
+
+        <button class="chatbot-toggler" id="init" onclick="showChat()">
+            <span class="material-symbols-outlined"><i class='bx bxs-chat'></i></span>
+            <span class="notification"><strong>3</strong></span>
+            <span class="material-symbols-outlined"><i class='bx bx-window-close' ></i></span>
+
+        </button>
+
+        <div class="chatbot" id="test">
+            <div class="child" id="chatbot">
+                <div class="headerChat">
+                    <div class="h-child">
+                        <div class="imgBot-Contenair">
+                            <img src="Image/chatbot.png" alt="avatar" id="avatar">
+                        </div>
+                        <div>
+                            <span class="name">Chatbot/Gerard 😀👨‍💻</span>
+                            <span style="color:lawngreen; font-weight: 100;font-size: 10px;line-height: 8px;">online</span><span class="typing" style="color:white; font-weight: 100; font-style:italic;font-size: 10px;line-height: 8px; display: none;">typing . . .</span>
+                        </div>
+                    </div>
+
+                    <div class="headerBtn">
+                        <span class="closeBtn material-symbols-outlined" onclick="closeChat()"><i class='bx bx-left-arrow-alt'></i></span>
+                        <span class="refBtn"><i class='bx bx-refresh' onclick="initChat()"></i></span>
+                    </div>
+                </div>
+
+                <div id="chat-box">
+                    
+                </div>
+                <div class="chat-input">
+                    <form>
+                    <i class="love">❤️</i><textarea placeholder="Type only your name here" class="inputMessage" name="story" rows="5" cols="33"></textarea>
+                    
+                    <!-- <i class='bx bxs-microphone'></i> -->
+                    <i class='bx bxs-send'></i>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
 
         <!-- ===== ABOUT ==== -->
         <section class="about section" id="about">
@@ -66,18 +124,19 @@
 
             <div class="about__container bd-grid">
                 <div class="about__img">
-                    <img src="./Image/c13fbb59-1fa4-436e-bc58-b8f79ce9da92.JPG" alt="img">
+                    <img src="./Image/gerardphot04.jpg" alt="img">
                     
                 </div>
 
                 <div>
-                    <h2 class="about__subtitle">My name Gérard</h2>
+                    <h2 class="about__subtitle">My name is Gérard</h2>
                     <p class="about__text">I'm a exploration geologist for identifying and assessing the location, quantity and quality of mineral deposit. I have a degree (Bac+5) in Exploration and Mining Geology at the Official University of Bukavu. I have strong skills in RC/DD Drilling Process, Deposit Evaluation and 3D Geological Modeling. Currently I am studing programming at Kadea Academy in Goma city, located at the Estern Cost of the Democratic Republic of Congo. My goal on the coding path is to be able to make earth process simulations. I'm actually passionate about that.
                         <br><br>
                         If you want to know me better, feel free to cantact me so we can have a conversation. You will find that I am a really hard working person and a great communicator. I'm also a responsable worker and a creative of problem solver. I am the type of person who bring meaning into the actions of others and teammates because I'm always optimistic, motivated and I find joy in every little think in life. Because of that, I have many friends and people enjoy my friendship, they prefer make teams up together. If you don't believe me, hire me or team up with me. You won't be disappointed.
                         <br><br>
-                        Download the english version of CV below.
-                        <a href="./CV/CV_and_Montivation_English_Vesion.pdf"><img style="border-radius: 50%;" src="./Image/cvlogo.png" class="cv__img"></a>
+
+                        Download my personal SWOT analisis.
+                        <a href="./CV/Personal SWOT analysis Gerard.pdf"><img src="./Image/sowt.png" class="cv__img"></a>
                     </p>
                 </div>
             </div>
@@ -181,7 +240,7 @@
                         <div class="skills__bar skills__datamine"></div>
                     </div>
 
-                    <div class="skills__data">
+                    <!-- <div class="skills__data">
                         <div class="skills__name">
                             <img src=".Image/4257618.png" class='forage skills__icon' >
                             <span class="skills__name">Forage RC et DD</span>
@@ -192,7 +251,7 @@
                         </div>
     
                         <div class="skills__bar skills__forage"></div>
-                    </div>
+                    </div> -->
 
                 </div>
                 
@@ -383,6 +442,21 @@
                 <div class="work__img">
                     <img src="./Image/work/work10.png" alt="img">
                 </div>
+                <div class="work__img">
+                    <img src="./Image/work/work11.png" alt="img">
+                </div>
+                <div class="work__img">
+                    <img src="./Image/work/work12.png" alt="img">
+                </div>
+                <div class="work__img">
+                    <img src="./Image/work/work13.png" alt="img">
+                </div>
+                <div class="work__img">
+                    <img src="./Image/work/work14.png" alt="img">
+                </div>
+                <div class="work__img">
+                    <img src="./Image/work/work15.png" alt="img">
+                </div>
                 
             </div>
         </section>
@@ -407,10 +481,9 @@
                     <a href="tel:+243991102448" class="footer__icon"><img src="./Image/Phone_iOS.png" alt="" class="tel icontac"></a>
                     <a href="sms:+243991102448" class="footer__icon"><img src="./Image/IMessage_logo.svg.png" alt="" class="sms icontac"></a>
                     <a href="https://wa.me/243991102448" class="footer__icon"><img src="./Image/WhatsApp.svg.png" class="whatapp icontac"></a>
+                    <span class="notificationW"><strong>1</strong></span>
                 </div>
-
             </div>
-
         </section>
 
     </main>
@@ -436,9 +509,6 @@
         
 
     </footer>
-
-
-
 
     <!-- ===== SCROLL REVEAL ==== -->
     <script src="https://unpkg.com/scrollreveal"></script>
