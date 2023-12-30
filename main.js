@@ -76,7 +76,7 @@ let data = {
     //======================================================
     //Let's talk about Who is Gerard ? Personnality, stadies
     who: {
-        title: ["Thanks for your question. This is Gerard !","<img src='./Image/1676199389603.jpeg' style='width:120px; border-radius:15px'>","He is a geologist and developper.","So what would you like to know about him specifically?"],
+        title: ["Thanks for your question. This is Gerard !","<img src='sagesourire.png' style='width:120px; border-radius:15px'>","He is a geologist and developper.","So what would you like to know about him specifically?"],
         options: ['Challenges he went through.','Familly education.','Education or stadies influences.','Plans and project.'],
          url: {
             
