@@ -316,6 +316,21 @@ img{
     justify-content: center;
     align-items: center;
 }
+.notif{
+    position: fixed;
+    font-size: 18px;
+    bottom: 77px;
+    right: 120px;
+    border: 1px black solid;
+    font-size: 0.1 rem;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: white;
+    width: 150px;
+}
+.notif p{
+    font-size: 10px
+}
 .show-chat .chatbot-toggler{
     transform: rotate(360deg);
 }
