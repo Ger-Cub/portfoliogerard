@@ -225,6 +225,7 @@ let data = {
 function showChat(){
     document.body.classList.toggle("show-chat");
     document.body.querySelector(".notification").style.opacity="0";
+    document.body.querySelector(".notif").style.opacity="0";
     greating()
 }
 function closeChat(){
