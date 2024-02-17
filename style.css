@@ -807,9 +807,9 @@ img{
     transition: 1s;
     cursor: pointer;
 }
-.work__img img:hover{
+/* .work__img img:hover{
     transform: scale(1.1);
-}
+} */
 
 /* ==== CONTACT ==== */
 .contatc__bigcontainer{
