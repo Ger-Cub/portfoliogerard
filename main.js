@@ -303,7 +303,7 @@ function creatNameUser(){
 function handleResultsGreeting(userName){
     console.log(userName)
     let elm = document.createElement("p");
-    elm.innerHTML = 'Nice to me you '+userName+" 🤗!"+"I hope you're doing well today...";
+    elm.innerHTML = 'Nice to meet you '+userName+" 🤗!"+"I hope you're doing well today...";
     elm.setAttribute("class","msg");
     cbot.appendChild(elm);
 
