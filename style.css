@@ -297,6 +297,21 @@ img{
     transition: all 0.2s ease;
     z-index: 100;
 }
+.notif{
+    position: fixed;
+    font-size: 18px;
+    bottom: 77px;
+    right: 120px;
+    border: 1px black solid;
+    font-size: 0.1 rem;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: white;
+    width: 150px;
+}
+.notif p{
+    font-size: 10px
+}
 .chatbot-toggler:hover{
     background: var(--second-color);
 }
@@ -744,29 +759,29 @@ img{
 .skills__css{
     width: 85%;
 }
-.skills__algo{
+/* .skills__algo{
     width: 30%;
-}
+} */
 .skills__js{
-    width: 45%;
+    width: 75%;
 }
-.skills__php{
+/* .skills__php{
     width: 5%;
-}
+} */
 .skills__python{
-    width: 5%;
+    width: 50%;
 }
 .skills__sql{
-    width: 3%;
+    width: 60%;
 }
 .skills__git{
-    width: 30%;
+    width: 70%;
 }
-.skills__server{
+/* .skills__server{
     width: 10%;
-}
+} */
 .skills__ux{
-    width: 50%;
+    width: 80%;
 }
 
 .skills__img{
@@ -784,7 +799,7 @@ img{
     row-gap: 2rem;
 }
 .work__img{
-    box-shadow: 0 4px 25px rgba(14,36, 49,.15);
+    
     border-radius: .5rem;
     overflow: hidden;
 }
@@ -792,9 +807,9 @@ img{
     transition: 1s;
     cursor: pointer;
 }
-.work__img img:hover{
+/* .work__img img:hover{
     transform: scale(1.1);
-}
+} */
 
 /* ==== CONTACT ==== */
 .contatc__bigcontainer{
@@ -968,7 +983,7 @@ img{
     .skills__container{
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 0.5fr 1fr 0.5fr 1fr;
+        grid-template-rows: 0.25fr 0.5fr 0.25fr 0.5fr;
     }
     .cellule1{
         grid-area: 1/1/2/3;
