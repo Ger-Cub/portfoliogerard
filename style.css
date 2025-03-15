@@ -11,6 +11,8 @@
     --first-color:#4070F4;
     --first-colorJaune:#0E2431;
     --second-color: #0E2431;
+    --mixed-color: #f95f35;
+    --gradient: linear-gradient(98.63deg, #4070F4 0%, #f95f35 100%);
 }
 
 /* ===== Fluente y tipografia ===== */
@@ -59,6 +61,19 @@ body{
     font-size: var(--normal-font-size);
     color: var(--second-color);
 }
+
+/* blur */
+.blur {
+    position: fixed;
+    width: 32rem;
+    height: 14rem;
+    border-radius: 50%;
+    background-image: var(--gradient);
+    filter: blur(150px);
+    z-index: -100;
+  }
+  
+
 h1,h2,p{
     margin: 0;
 }
@@ -118,7 +133,8 @@ img{
     left: 0;
     z-index: var(--z-fixed);
     background-color: #fff;
-    box-shadow: 0 2px 20px rgba(1, 2, 2, 0.25)
+    box-shadow: 0 2px 20px rgba(1, 2, 2, 0.25);
+    background-image: linear-gradient(98.63deg, #4070F4 0%, #f95f35 100%);
 }
 
 
@@ -886,7 +902,7 @@ img{
 
 /* =====FOOTER===== */
 .footer{
-    background-color: var(--second-color);
+    background-image: var(--gradient);
     color: #fff;
     text-align: center;
     font-weight: var(--second-color);
