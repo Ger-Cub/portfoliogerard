@@ -1,582 +1,736 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Gerard Cubaka 2023</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Gérard Cubaka — Exploration Geologist & GeoAI Developer</title>
+    <meta name="description"
+        content="Portfolio of Gérard Cubaka — Exploration Geologist, Remote Sensing specialist and GeoAI Developer based in Goma, DRC.">
+    <meta name="keywords"
+        content="geologist, GeoAI, remote sensing, exploration, GeoCongo, satellite, QGIS, Python, deep learning">
+    <meta property="og:title" content="Gérard Cubaka — GeoAI Developer">
+    <meta property="og:description"
+        content="Exploration Geologist & GeoAI Developer — Building AI-powered geospatial solutions.">
+    <meta property="og:type" content="website">
 
-    <!-- ===== BOX ICONS===== -->
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Box Icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-
-    <!-- ===== FAVICON ===== -->
+    <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
     <link rel="manifest" href="./favicon/site.webmanifest">
-    <link rel="mask-icon" href="./favicon/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
 
-
-
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <!-- ===== HEADER ==== -->
 
-    <header class="l-header">
-        <nav class="nav bd-grid">
-            <div>
-                <!-- <a href="https://www.google.com/search?channel=fs&client=ubuntu&q=gerard+cubaka" class="nav__logo">
-                    <img style="width: 5rem;" src="./Image/logoGerard.png">
-                </a> -->
-                <h1 style="color: white;">G<span style="color: var(--mixed-color);">é</span>rard<span style="color: var(--mixed-color);">!</span></h1>
-            </div>
+    <!-- ===== HEADER ===== -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#home" class="nav__logo">
+                G<span class="accent">é</span>rard<span class="accent">.</span>
+            </a>
 
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
-                    <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
-                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-                    <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-                    <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
-                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                    <li><a href="#home" class="nav__link active" data-i18n="nav.home">Home</a></li>
+                    <li><a href="#about" class="nav__link" data-i18n="nav.about">About</a></li>
+                    <li><a href="#expertise" class="nav__link" data-i18n="nav.expertise">Expertise</a></li>
+                    <li><a href="#skills" class="nav__link" data-i18n="nav.skills">Skills</a></li>
+                    <li><a href="#projects" class="nav__link" data-i18n="nav.projects">Projects</a></li>
+                    <li><a href="#contact" class="nav__link" data-i18n="nav.contact">Contact</a></li>
                 </ul>
+                <button class="nav__close" id="nav-close"><i class='bx bx-x'></i></button>
             </div>
 
-            <div class="nav__toggle" id="nav-toggle">
-                <i class='bx bx-menu' style="font-size: 2rem;"></i>
+            <div class="nav__actions">
+                <!-- Language Switcher -->
+                <div class="lang-switcher" id="lang-switcher">
+                    <button class="lang-btn active" data-lang="en">EN</button>
+                    <span>|</span>
+                    <button class="lang-btn" data-lang="fr">FR</button>
+                </div>
+
+                <button class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </button>
             </div>
         </nav>
     </header>
 
-    <!-- =====MAIN===== -->
+    <main>
 
-    <main class="l-main">
-        <!-- ===== HOME ==== -->
+        <!-- ===== HERO ===== -->
+        <section class="hero section" id="home">
+            <!-- Background blobs -->
+            <div class="hero__blob blob-1"></div>
+            <div class="hero__blob blob-2"></div>
+            <div class="hero__blob blob-3"></div>
 
-        <section class="home section bd-grid" id="home">
-            <div class="blur" style="top:-18%; right: 0"></div>
-            <div class="blur" style="top: 36%; left:-8rem"></div>
+            <!-- Satellite grid overlay -->
+            <div class="hero__grid"></div>
 
-            <div class="home__data">
-                <h1 class="home__title">Hi,<br>I'm <span class="home__title-color">Gérard!</span><br>I am a Modeling
-                    Geologist and a <br>Software Engineer.</h1>
-                <a href="mailto:gerardcubakabisimwa@gmail.com" class="button">Hire me</a>
+            <div class="hero__container container">
+                <div class="hero__data">
+                    <div class="hero__badge">
+                        <i class='bx bx-radar'></i>
+                        <span data-i18n="hero.badge">GeoAI • Remote Sensing • Exploration</span>
+                    </div>
+                    <h1 class="hero__title">
+                        <span data-i18n="hero.greeting">Hi, I'm</span>
+                        <span class="hero__name">Gérard Cubaka</span>
+                    </h1>
+                    <h2 class="hero__subtitle">
+                        <span class="typed-text" id="typed-text"></span><span class="typed-cursor">|</span>
+                    </h2>
+                    <p class="hero__description" data-i18n="hero.description">
+                        Transforming raw geological data into AI-powered insights. Building the future of geospatial
+                        intelligence from Goma, DRC.
+                    </p>
+
+                    <div class="hero__buttons">
+                        <a href="#contact" class="btn btn--primary" data-i18n="hero.hire">Hire Me</a>
+                        <a href="#projects" class="btn btn--outline" data-i18n="hero.projects">View Projects</a>
+                        <a href="./CV/CV_and_Montivation_English_Vesion.pdf" class="btn btn--ghost" download
+                            data-i18n="hero.cv">
+                            <i class='bx bxs-download'></i> Download CV
+                        </a>
+                    </div>
+
+                    <div class="hero__socials">
+                        <a href="https://www.linkedin.com/in/g%C3%A9rard-cubaka-38a27619b/" class="social__icon"
+                            target="_blank" title="LinkedIn">
+                            <i class='bx bxl-linkedin'></i>
+                        </a>
+                        <a href="https://github.com/Ger-Cub/Ger-Cub" class="social__icon" target="_blank"
+                            title="GitHub">
+                            <i class='bx bxl-github'></i>
+                        </a>
+                        <a href="https://join.skype.com/invite/GvT5T7VIptbo" class="social__icon" target="_blank"
+                            title="Skype">
+                            <i class='bx bxl-skype'></i>
+                        </a>
+                        <a href="https://wa.me/243991102448" class="social__icon" target="_blank" title="WhatsApp">
+                            <i class='bx bxl-whatsapp'></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero__image">
+                    <div class="hero__img-wrapper">
+                        <div class="hero__img-ring ring-1"></div>
+                        <div class="hero__img-ring ring-2"></div>
+                        <div class="hero__img-ring ring-3"></div>
+                        <img src="./assets/img/hero.png" alt="Gérard Cubaka" class="hero__photo">
+                        <div class="hero__img-badge badge-geo">
+                            <i class='bx bx-map-alt'></i>
+                            <span>Goma, DRC</span>
+                        </div>
+                        <div class="hero__img-badge badge-ai">
+                            <i class='bx bx-brain'></i>
+                            <span>GeoAI</span>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="home__social">
-                <a href="https://www.linkedin.com/in/g%C3%A9rard-cubaka-38a27619b/?originalSubdomain=cd"
-                    class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
-                <a href="https://join.skype.com/invite/GvT5T7VIptbo" class="home__social-icon"><i
-                        class='bx bxl-skype'></i></a>
-                <a href="https://github.com/Ger-Cub/Ger-Cub" class="home__social-icon"><i class='bx bxl-github'></i></a>
+            <!-- Stats bar -->
+            <div class="hero__stats container">
+                <div class="stat">
+                    <span class="stat__number">5+</span>
+                    <span class="stat__label" data-i18n="stats.years">Years Experience</span>
+                </div>
+                <div class="stat__divider"></div>
+                <div class="stat">
+                    <span class="stat__number">10+</span>
+                    <span class="stat__label" data-i18n="stats.projects">Projects Completed</span>
+                </div>
+                <div class="stat__divider"></div>
+                <div class="stat">
+                    <span class="stat__number">2</span>
+                    <span class="stat__label" data-i18n="stats.companies">Companies Founded</span>
+                </div>
+                <div class="stat__divider"></div>
+                <div class="stat">
+                    <span class="stat__number">Bac+5</span>
+                    <span class="stat__label" data-i18n="stats.degree">Geology Degree</span>
+                </div>
             </div>
-
-            <div class="home__img">
-                <img src="./Image/844cfa99-a63b-4b82-97bd-18025ec12500.png" alt="image">
-            </div>
-            <a href="./CV/CV_and_Montivation_English_Vesion.pdf" class="Downloadcv">Download CV <span><i
-                        class='bx bxs-download'></span></i></a>
-
         </section>
 
-        <!-- ===== CHAT BOT ==== -->
-
-        <button class="chatbot-toggler" id="init" onclick="showChat()">
-            <span class="material-symbols-outlined"><i class='bx bxs-chat'></i></span>
-            <span class="notification"><strong>3</strong></span>
-            <span class="material-symbols-outlined"><i class='bx bx-window-close'></i></span>
-
-        </button>
-        <div class="notif">
-            <p>Hey there 😀 how's it going? Tell me how can I help you </p>
-        </div>
-
-        <div class="chatbot" id="test">
-            <div class="child" id="chatbot">
-                <div class="headerChat">
-                    <div class="h-child">
-                        <div class="imgBot-Contenair">
-                            <img src="Image/chatbot.png" alt="avatar" id="avatar">
-                        </div>
-                        <div>
-                            <span class="name">Chatbot/Gerard 😀👨‍💻</span>
-                            <span
-                                style="color:lawngreen; font-weight: 100;font-size: 10px;line-height: 8px;">online</span><span
-                                class="typing"
-                                style="color:white; font-weight: 100; font-style:italic;font-size: 10px;line-height: 8px; display: none;">typing
-                                . . .</span>
-                        </div>
-                    </div>
-
-                    <div class="headerBtn">
-                        <span class="closeBtn material-symbols-outlined" onclick="closeChat()"><i
-                                class='bx bx-left-arrow-alt'></i></span>
-                        <span class="refBtn"><i class='bx bx-refresh' onclick="initChat()"></i></span>
-                    </div>
-                </div>
-
-                <div id="chat-box">
-
-                </div>
-                <div class="chat-input">
-                    <form>
-                        <i class="love">❤️</i><textarea placeholder="Type only your name here" class="inputMessage"
-                            name="story" rows="5" cols="33"></textarea>
-
-                        <!-- <i class='bx bxs-microphone'></i> -->
-                        <i class='bx bxs-send'></i>
-                    </form>
-                </div>
-            </div>
-        </div>
-
-
-
-        <!-- ===== ABOUT ==== -->
+        <!-- ===== ABOUT ===== -->
         <section class="about section" id="about">
-            <h2 class="section-title">About</h2>
+            <div class="section__header">
+                <span class="section__tag" data-i18n="about.tag">About Me</span>
+                <h2 class="section__title" data-i18n="about.title">Who is Gérard?</h2>
+            </div>
 
-            <div class="about__container bd-grid">
-                <div class="about__img">
-                    <img src="./Image/gerardphot04.jpg" alt="img">
-
+            <div class="about__container container">
+                <div class="about__image">
+                    <div class="about__img-wrapper">
+                        <img src="./assets/img/hero.png" alt="Gérard Cubaka" loading="lazy">
+                        <div class="about__img-card">
+                            <i class='bx bx-satellite'></i>
+                            <div>
+                                <strong data-i18n="about.card1.title">Remote Sensing</strong>
+                                <span data-i18n="about.card1.sub">Specialist</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div>
-                    <h2 class="about__subtitle">My Profile</h2>
-                    <p class="about__text">I'm an Exploration Geologist, I identify and assess the location,
-                        quality, and quantity of mineral deposits. I have a degree (Bac+5) in Exploration and Mining
-                        Geology at the Official University of Bukavu. I have strong skills in both RC and DD Drilling
-                        Process,
-                        Deposit Evaluation and 3D Geological Modeling.
-                        <br><br>
-                        As a software engineer working in a clinic, I develop and implement applications that streamline
-                        patient management,
-                        including electronic medical records and telemedicine solutions. Collaborating closely with
-                        healthcare professionals,
-                        I ensure that out technology meets their needs while maintaining strict data security to protect
-                        patient information. Additionally,
-                        I provide ongoing maintence and technical suppor for existing systems and train staff on new
-                        technologies,
-                        all aimed at enhancing the quality of care delivered to patients.
-                        <br><br>
-                        If you’d like to get to know me better, feel free to reach out for a conversation. I’m a
-                        hardworking individual and an effective communicator. I pride myself on being responsible and a
-                        creative problem solver. I strive to bring meaning to the actions of my teammates through my
-                        optimism and motivation, finding joy in the little things in life. This positive approach has
-                        helped me build strong friendships; people enjoy working with me and often prefer to team up
-                        together. If you want to see for yourself, consider hiring me or collaborating with me. I
-                        promise you won’t be disappointed.
-                        <br><br>
+                <div class="about__content">
+                    <div class="about__tabs">
+                        <button class="tab__btn active" data-tab="profile" data-i18n="about.tab1">Profile</button>
+                        <button class="tab__btn" data-tab="geo" data-i18n="about.tab2">Geology</button>
+                        <button class="tab__btn" data-tab="geoai" data-i18n="about.tab3">GeoAI</button>
+                    </div>
 
-                        Download my personal SWOT analisis.
-                        <a href="./CV/Personal SWOT analysis Gerard.pdf"><img src="./Image/sowt.png"
-                                class="cv__img"></a>
-                    </p>
+                    <div class="tab__content active" id="tab-profile">
+                        <p data-i18n="about.profile.text">
+                            I'm Gérard Cubaka Bisimwa, an Exploration Geologist and GeoAI Developer from Goma, North
+                            Kivu, DRC. I hold a Bac+5 in Exploration and Mining Geology from the Official University of
+                            Bukavu (UOB). Passionate about the intersection of earth sciences and artificial
+                            intelligence, I build tools that make geospatial intelligence accessible and actionable.
+                        </p>
+                        <div class="about__info">
+                            <div class="info__item">
+                                <i class='bx bx-map-pin'></i>
+                                <span>Goma, North Kivu, DRC</span>
+                            </div>
+                            <div class="info__item">
+                                <i class='bx bx-envelope'></i>
+                                <span>gerardcubakabisimwa@gmail.com</span>
+                            </div>
+                            <div class="info__item">
+                                <i class='bx bx-globe'></i>
+                                <span>geocongoai.com</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab__content" id="tab-geo">
+                        <p data-i18n="about.geo.text">
+                            With expertise in RC and Diamond Drilling processes, I specialize in geological data
+                            acquisition, 3D deposit modeling with Surpac, and geostatistical resource evaluation. My
+                            geological foundation drives my ability to extract meaningful insights from complex spatial
+                            datasets.
+                        </p>
+                        <ul class="about__list">
+                            <li><i class='bx bx-check-circle'></i> <span data-i18n="about.geo.l1">RC & Diamond Drilling
+                                    Process</span></li>
+                            <li><i class='bx bx-check-circle'></i> <span data-i18n="about.geo.l2">3D Geological Block
+                                    Modeling (Surpac)</span></li>
+                            <li><i class='bx bx-check-circle'></i> <span data-i18n="about.geo.l3">Mineral Deposit
+                                    Evaluation</span></li>
+                            <li><i class='bx bx-check-circle'></i> <span data-i18n="about.geo.l4">Geostatistical
+                                    Analysis</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="tab__content" id="tab-geoai">
+                        <p data-i18n="about.geoai.text">
+                            I build AI-powered geospatial solutions using satellite imagery, deep learning, and cloud
+                            platforms. Founder of GeoCongo AI — a platform deploying foundation models (Prithvi, SAM2)
+                            for landcover classification, landslide detection, and mineral prospecting in Central
+                            Africa.
+                        </p>
+                        <ul class="about__list">
+                            <li><i class='bx bx-check-circle'></i> <span data-i18n="about.geoai.l1">Foundation Models
+                                    (Prithvi, SAM2)</span></li>
+                            <li><i class='bx bx-check-circle'></i> <span data-i18n="about.geoai.l2">Satellite Image
+                                    Analysis (SAR/Multispectral)</span></li>
+                            <li><i class='bx bx-check-circle'></i> <span data-i18n="about.geoai.l3">Google Cloud /
+                                    Vertex AI Deployment</span></li>
+                            <li><i class='bx bx-check-circle'></i> <span data-i18n="about.geoai.l4">Landcover & Change
+                                    Detection</span></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- ===== SKILLS ==== -->
+        <!-- ===== EXPERTISE ===== -->
+        <section class="expertise section" id="expertise">
+            <div class="section__header">
+                <span class="section__tag" data-i18n="expertise.tag">What I Do</span>
+                <h2 class="section__title" data-i18n="expertise.title">My Expertise</h2>
+            </div>
+
+            <div class="expertise__container container">
+                <div class="expertise__card">
+                    <div class="expertise__icon">
+                        <i class='bx bx-layer'></i>
+                    </div>
+                    <h3 class="expertise__title" data-i18n="exp.geo.title">Exploration Geology</h3>
+                    <p class="expertise__desc" data-i18n="exp.geo.desc">Mineral deposit assessment, RC/DD drilling, core
+                        description, 3D geological modeling and resource evaluation using industry-standard tools.</p>
+                    <div class="expertise__tools">
+                        <span>Surpac</span><span>QGIS</span><span>IOGAS</span><span>ArcGIS</span>
+                    </div>
+                </div>
+
+                <div class="expertise__card expertise__card--featured">
+                    <div class="expertise__icon">
+                        <i class='bx bx-satellite'></i>
+                    </div>
+                    <div class="expertise__badge" data-i18n="exp.featured">Featured</div>
+                    <h3 class="expertise__title" data-i18n="exp.rs.title">Remote Sensing & GeoAI</h3>
+                    <p class="expertise__desc" data-i18n="exp.rs.desc">Processing SAR and multispectral satellite
+                        imagery, deploying foundation AI models for landcover mapping, change detection, and hazard
+                        assessment in Central Africa.</p>
+                    <div class="expertise__tools">
+                        <span>Prithvi</span><span>SAM2</span><span>GEE</span><span>TensorFlow</span><span>Vertex
+                            AI</span>
+                    </div>
+                </div>
+
+                <div class="expertise__card">
+                    <div class="expertise__icon">
+                        <i class='bx bx-code-block'></i>
+                    </div>
+                    <h3 class="expertise__title" data-i18n="exp.dev.title">Software Development</h3>
+                    <p class="expertise__desc" data-i18n="exp.dev.desc">Building full-stack web applications, REST APIs,
+                        and cloud-deployed AI services with modern frameworks and best practices.</p>
+                    <div class="expertise__tools">
+                        <span>Python</span><span>FastAPI</span><span>React</span><span>GCP</span><span>PostgreSQL</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SKILLS ===== -->
         <section class="skills section" id="skills">
-            <h2 class="section-title">Skills</h2>
+            <div class="section__header">
+                <span class="section__tag" data-i18n="skills.tag">My Arsenal</span>
+                <h2 class="section__title" data-i18n="skills.title">Skills & Tools</h2>
+            </div>
 
-            <!-- GEOLOGICAL SKILLS -->
-            <div class="skills__container bd-grid">
-                <div class="cellule1">
-                    <h2 class="skills__subtitle">Geological Skills</h2>
-                    <p class="skills__text">I have skills in drilling and gatting of geological data in the ground. I
-                        know how to prepare RC machine before the drilling process. And all so I can do great
-                        description and interpretation of the cores.
-                        <br><br>
-                        I’m able to build geological block model with drilling data and on top of that a geostastical
-                        evaluation of the data in order to identify the mineral deposit.
-                    </p>
-                </div>
+            <div class="skills__container container">
 
-                <div class="cellule3">
-                    <div>
-                        <img src="./Image/WhatsApp Image 2023-11-03 at 13.26.54.jpeg" alt="img" class="skills__img">
+                <!-- Geo Skills -->
+                <div class="skills__group">
+                    <h3 class="skills__group-title">
+                        <i class='bx bx-world'></i>
+                        <span data-i18n="skills.geo">Geosciences & Remote Sensing</span>
+                    </h3>
+                    <div class="skills__list">
+                        <div class="skill__item" data-percent="95">
+                            <div class="skill__info">
+                                <img src="./Image/Qgis-icon-3.0.png" alt="QGIS" class="skill__logo">
+                                <span class="skill__name">QGIS</span>
+                                <span class="skill__percent">95%</span>
+                            </div>
+                            <div class="skill__bar">
+                                <div class="skill__fill" data-width="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill__item" data-percent="90">
+                            <div class="skill__info">
+                                <img src="./Image/logo-surpac-300x225.png" alt="Surpac" class="skill__logo">
+                                <span class="skill__name">Surpac</span>
+                                <span class="skill__percent">90%</span>
+                            </div>
+                            <div class="skill__bar">
+                                <div class="skill__fill" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill__item" data-percent="80">
+                            <div class="skill__info">
+                                <i class='bx bx-satellite skill__logo-icon'></i>
+                                <span class="skill__name">Google Earth Engine</span>
+                                <span class="skill__percent">80%</span>
+                            </div>
+                            <div class="skill__bar">
+                                <div class="skill__fill" data-width="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill__item" data-percent="70">
+                            <div class="skill__info">
+                                <img src="./Image/arcgis.png" alt="ArcGIS" class="skill__logo">
+                                <span class="skill__name">ArcGIS</span>
+                                <span class="skill__percent">70%</span>
+                            </div>
+                            <div class="skill__bar">
+                                <div class="skill__fill" data-width="70"></div>
+                            </div>
+                        </div>
+                        <div class="skill__item" data-percent="60">
+                            <div class="skill__info">
+                                <img src="./Image/iogas.png" alt="IOGAS" class="skill__logo">
+                                <span class="skill__name">IOGAS</span>
+                                <span class="skill__percent">60%</span>
+                            </div>
+                            <div class="skill__bar">
+                                <div class="skill__fill" data-width="60"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="cellule2">
-                    <div class="skills__data">
-                        <div class="skills__name">
-                            <img src="./Image/Qgis-icon-3.0.png" class='qgis skills__icon'>
-                            <span class="skills__name">QGIS</span>
+                <!-- Dev Skills -->
+                <div class="skills__group">
+                    <h3 class="skills__group-title">
+                        <i class='bx bx-brain'></i>
+                        <span data-i18n="skills.dev">AI & Development</span>
+                    </h3>
+                    <div class="skills__list">
+                        <div class="skill__item" data-percent="80">
+                            <div class="skill__info">
+                                <i class='bx bxl-python skill__logo-icon'></i>
+                                <span class="skill__name">Python (GeoAI)</span>
+                                <span class="skill__percent">80%</span>
+                            </div>
+                            <div class="skill__bar">
+                                <div class="skill__fill" data-width="80"></div>
+                            </div>
                         </div>
-
-                        <div>
-                            <span class="skills__percentage">95%</span>
+                        <div class="skill__item" data-percent="70">
+                            <div class="skill__info">
+                                <i class='bx bx-chip skill__logo-icon'></i>
+                                <span class="skill__name">TensorFlow / PyTorch</span>
+                                <span class="skill__percent">70%</span>
+                            </div>
+                            <div class="skill__bar">
+                                <div class="skill__fill" data-width="70"></div>
+                            </div>
                         </div>
-
-                        <div class="skills__bar skills__html"></div>
-                    </div>
-
-                    <div class="skills__data">
-                        <div class="skills__name">
-                            <img src="./Image/logo-surpac-300x225.png" class='surpac skills__icon'>
-                            <span class="skills__name">SURPAC</span>
+                        <div class="skill__item" data-percent="75">
+                            <div class="skill__info">
+                                <i class='bx bx-server skill__logo-icon'></i>
+                                <span class="skill__name">FastAPI / REST APIs</span>
+                                <span class="skill__percent">75%</span>
+                            </div>
+                            <div class="skill__bar">
+                                <div class="skill__fill" data-width="75"></div>
+                            </div>
                         </div>
-
-                        <div>
-                            <span class="skills__percentage">90%</span>
+                        <div class="skill__item" data-percent="95">
+                            <div class="skill__info">
+                                <i class='bx bxl-html5 skill__logo-icon'></i>
+                                <span class="skill__name">HTML / CSS / JS</span>
+                                <span class="skill__percent">95%</span>
+                            </div>
+                            <div class="skill__bar">
+                                <div class="skill__fill" data-width="95"></div>
+                            </div>
                         </div>
-
-                        <div class="skills__bar skills__surpac"></div>
-                    </div>
-
-                    <div class="skills__data">
-                        <div class="skills__name">
-                            <img src="./Image/iogas.png" class='iogas skills__icon'>
-                            <span class="skills__name">IOGAS</span>
+                        <div class="skill__item" data-percent="70">
+                            <div class="skill__info">
+                                <i class='bx bxl-google-cloud skill__logo-icon'></i>
+                                <span class="skill__name">Google Cloud / Vertex AI</span>
+                                <span class="skill__percent">70%</span>
+                            </div>
+                            <div class="skill__bar">
+                                <div class="skill__fill" data-width="70"></div>
+                            </div>
                         </div>
-
-                        <div>
-                            <span class="skills__percentage">60%</span>
-                        </div>
-
-                        <div class="skills__bar skills__iogas"></div>
-                    </div>
-
-                    <div class="skills__data">
-                        <div class="skills__name">
-                            <img src="./Image/arcgis.png" class='arcgis skills__icon'>
-                            <span class="skills__name">ARCGIS</span>
-                        </div>
-
-                        <div>
-                            <span class="skills__percentage">70%</span>
-                        </div>
-
-                        <div class="skills__bar skills__arcgis"></div>
-                    </div>
-
-                    <div class="skills__data">
-                        <div class="skills__name">
-                            <img src="./Image/googleearth.jpeg" class='arcgis skills__icon'>
-                            <span class="skills__name">Google Earth</span>
-                        </div>
-
-                        <div>
-                            <span class="skills__percentage">85%</span>
-                        </div>
-
-                        <div class="skills__bar skills__googleearth"></div>
-                    </div>
-
-                    <div class="skills__data">
-                        <div class="skills__name">
-                            <img src="./Image/datamine.jpeg" class='arcgis skills__icon'>
-                            <span class="skills__name">Data Mine</span>
-                        </div>
-
-                        <div>
-                            <span class="skills__percentage">40%</span>
-                        </div>
-
-                        <div class="skills__bar skills__datamine"></div>
-                    </div>
-
-                    <!-- <div class="skills__data">
-                        <div class="skills__name">
-                            <img src=".Image/4257618.png" class='forage skills__icon' >
-                            <span class="skills__name">Forage RC et DD</span>
-                        </div>
-    
-                        <div>
-                            <span class="skills__percentage">50%</span>
-                        </div>
-    
-                        <div class="skills__bar skills__forage"></div>
-                    </div> -->
-
-                </div>
-
-
-
-
-                <!-- COMPUTER SCIENCE SKILLS -->
-
-                <div class="cellule4">
-                    <h2 class="skills__subtitle">Programing Skills</h2>
-                    <p class="skills__text"></p>
-                </div>
-
-                <div class="cellule6">
-                    <div>
-                        <img src="./Image/great-programmer.jpg" alt="img" class="skills__img">
                     </div>
                 </div>
-
-                <div class="cellule5">
-                    <div class="skills__data">
-                        <div class="skills__name">
-                            <i class='bx bxl-html5 skills__icon'></i>
-                            <span class="skills__name">HTML5</span>
-                        </div>
-
-                        <div>
-                            <span class="skills__percentage">95%</span>
-                        </div>
-
-                        <div class="skills__bar skills__html"></div>
-                    </div>
-
-                    <div class="skills__data">
-                        <div class="skills__name">
-                            <i class='bx bxl-css3 skills__icon'></i>
-                            <span class="skills__name">CSS3</span>
-                        </div>
-
-                        <div>
-                            <span class="skills__percentage">85%</span>
-                        </div>
-
-                        <div class="skills__bar skills__css"></div>
-                    </div>
-
-                    <!-- <div class="skills__data">
-                        <div class="skills__name">
-                            <i class='bx bx-brain skills__icon'></i>
-                            <span class="skills__name">ALGORITHMIQUE</span>
-                        </div>
-
-                        <div>
-                            <span class="skills__percentage">30%</span>
-                        </div>
-
-                        <div class="skills__bar skills__algo"></div>
-                    </div> -->
-
-                    <div class="skills__data">
-                        <div class="skills__name">
-                            <i class='bx bxl-javascript skills__icon'></i>
-                            <span class="skills__name">JAVASCRIPT</span>
-                        </div>
-
-                        <div>
-                            <span class="skills__percentage">75%</span>
-                        </div>
-
-                        <div class="skills__bar skills__js"></div>
-                    </div>
-
-                    <!-- <div class="skills__data">
-                        <div class="skills__name">
-                            <i class='bx bxl-php skills__icon'></i>
-                            <span class="skills__name">PHP</span>
-                        </div>
-
-                        <div>
-                            <span class="skills__percentage">45%</span>
-                        </div>
-
-                        <div class="skills__bar skills__php"></div>
-                    </div> -->
-
-
-                    <div class="skills__data">
-                        <div class="skills__name">
-                            <i class='bx bxl-python skills__icon'></i>
-                            <span class="skills__name">PYTHON</span>
-                        </div>
-
-                        <div>
-                            <span class="skills__percentage">50%</span>
-                        </div>
-
-                        <div class="skills__bar skills__python"></div>
-                    </div>
-
-
-                    <div class="skills__data">
-                        <div class="skills__name">
-                            <i class='bx bxl-sql skills__icon'></i>
-                            <span class="skills__name">SQL</span>
-                        </div>
-
-                        <div>
-                            <span class="skills__percentage">60%</span>
-                        </div>
-
-                        <div class="skills__bar skills__sql"></div>
-                    </div>
-
-                    <div class="skills__data">
-                        <div class="skills__name">
-                            <i class='bx bxl-git skills__icon'></i>
-                            <span class="skills__name">GIT</span>
-                        </div>
-
-                        <div>
-                            <span class="skills__percentage">70%</span>
-                        </div>
-
-                        <div class="skills__bar skills__git"></div>
-                    </div>
-
-                    <!-- <div class="skills__data">
-                        <div class="skills__name">
-                            <i class='bx bxs-server skills__icon'></i>
-                            <span class="skills__name">SERVER</span>
-                        </div>
-
-                        <div>
-                            <span class="skills__percentage">10%</span>
-                        </div>
-
-                        <div class="skills__bar skills__server"></div>
-                    </div> -->
-
-                    <div class="skills__data">
-                        <div class="skills__name">
-                            <i class='bx bxs-paint skills__icon'></i>
-                            <span class="skills__name">UX/UI</span>
-                        </div>
-
-                        <div>
-                            <span class="skills__percentage">80%</span>
-                        </div>
-
-                        <div class="skills__bar skills__ux"></div>
-                    </div>
-                </div>
-
-
-
             </div>
         </section>
 
-        <!-- ===== WORK ==== -->
-        <section class="work section" id="work">
-            <h2 class="section-title">Work</h2>
+        <!-- ===== PROJECTS ===== -->
+        <section class="projects section" id="projects">
+            <div class="section__header">
+                <span class="section__tag" data-i18n="projects.tag">My Work</span>
+                <h2 class="section__title" data-i18n="projects.title">Featured Projects</h2>
+            </div>
 
-            <div class="work__container bd-grid">
+            <div class="projects__container container">
 
-                <div class="work__img">
-                    <img src="./Image/work/Yetubook.png" alt="img">
-                </div>
-                <div class="work__img">
-                    <img src="./Image/work/Yetubook3.png" alt="img">
-                </div>
-                <div class="work__img">
-                    <img src="./Image/work/Yetubook2.png" alt="img">
-                </div>
-                
-
-
-                <div class="work__img">
-                    <img src="./Image/work/work3.png" alt="img">
-                </div>
-
-                <div class="work__img">
-                    <img src="./Image/work/work4.png" alt="img">
-                </div>
-
-                <div class="work__img">
-                    <img src="./Image/work/work5.png" alt="img">
-                </div>
-
-                <div class="work__img">
-                    <img src="./Image/la-distribution-de-glissement-de-terrain-a-katana.jpg" alt="img">
-                </div>
-
-                <div class="work__img">
-                    <img src="./Image/work/work8.png" alt="img">
-                </div>
-
-                <div class="work__img">
-                    <img src="./Image/work/work9.png" alt="img">
+                <!-- Featured: GeoCongo AI -->
+                <div class="project__card project__card--featured">
+                    <div class="project__image">
+                        <img src="./Image/work/work10.png" alt="GeoCongo AI" loading="lazy">
+                        <div class="project__overlay">
+                            <div class="project__links">
+                                <a href="https://www.geocongoai.com" target="_blank" class="project__link">
+                                    <i class='bx bx-link-external'></i>
+                                    <span data-i18n="proj.visit">Visit Site</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project__featured-badge">
+                            <i class='bx bx-star'></i> Featured
+                        </div>
+                    </div>
+                    <div class="project__content">
+                        <div class="project__meta">
+                            <span class="project__category">GeoAI Platform</span>
+                            <span class="project__year">2024–2025</span>
+                        </div>
+                        <h3 class="project__title">GeoCongo AI</h3>
+                        <p class="project__desc" data-i18n="proj.geocongo.desc">
+                            AI-powered geospatial intelligence platform for Central Africa. Deploys foundation models
+                            (Prithvi, SAM2) for landcover classification, landslide detection, and mineral prospecting
+                            using satellite imagery on Google Cloud Vertex AI.
+                        </p>
+                        <div class="project__tags">
+                            <span>Python</span><span>FastAPI</span><span>Prithvi</span>
+                            <span>SAM2</span><span>Vertex AI</span><span>React</span>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="work__img">
-                    <img src="./Image/work/work10.png" alt="img">
-                </div>
-                <div class="work__img">
-                    <img src="./Image/work/work11.png" alt="img">
-                </div>
-                <div class="work__img">
-                    <img src="./Image/work/work12.png" alt="img">
-                </div>
-                <div class="work__img">
-                    <img src="./Image/work/work13.png" alt="img">
-                </div>
-                <div class="work__img">
-                    <img src="./Image/work/work14.png" alt="img">
-                </div>
-                <div class="work__img">
-                    <img src="./Image/work/work15.png" alt="img">
-                </div>
-                
+                <!-- Other Projects Grid -->
+                <div class="projects__grid">
 
+                    <div class="project__card project__card--small">
+                        <div class="project__image">
+                            <img src="./Image/la-distribution-de-glissement-de-terrain-a-katana.jpg"
+                                alt="Landslide Mapping" loading="lazy">
+                            <div class="project__overlay">
+                                <div class="project__links">
+                                    <a href="#" class="project__link"><i class='bx bx-link-external'></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project__content">
+                            <span class="project__category">Remote Sensing</span>
+                            <h3 class="project__title" data-i18n="proj.landslide.title">Landslide Mapping — Katana</h3>
+                            <p class="project__desc" data-i18n="proj.landslide.desc">Satellite-based spatial analysis
+                                and distribution mapping of landslide hazards in the Katana territory, South Kivu.</p>
+                            <div class="project__tags"><span>QGIS</span><span>Remote Sensing</span><span>GIS</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project__card project__card--small">
+                        <div class="project__image">
+                            <img src="./Image/work/Yetubook.png" alt="Yetubook" loading="lazy">
+                            <div class="project__overlay">
+                                <div class="project__links">
+                                    <a href="#" class="project__link"><i class='bx bx-link-external'></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project__content">
+                            <span class="project__category">Web App</span>
+                            <h3 class="project__title">Yetubook</h3>
+                            <p class="project__desc" data-i18n="proj.yetubook.desc">Digital platform for local
+                                publishers and readers. Full-stack web application with e-commerce features.</p>
+                            <div class="project__tags"><span>HTML/CSS</span><span>JavaScript</span><span>Node.js</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project__card project__card--small">
+                        <div class="project__image">
+                            <img src="./Image/work/work3.png" alt="KaziHub" loading="lazy">
+                            <div class="project__overlay">
+                                <div class="project__links">
+                                    <a href="https://www.kazihub.digital" target="_blank" class="project__link"><i
+                                            class='bx bx-link-external'></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project__content">
+                            <span class="project__category">Digital Agency</span>
+                            <h3 class="project__title">KaziHub Digital Agency</h3>
+                            <p class="project__desc" data-i18n="proj.kazihub.desc">Co-founded KaziHub, a digital agency
+                                building web and mobile solutions for businesses across Central Africa.</p>
+                            <div class="project__tags"><span>React</span><span>Supabase</span><span>TypeScript</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </section>
 
-        <!-- ===== CONTACTS ==== -->
+        <!-- ===== CHATBOT ===== -->
+        <!-- Notification bubble -->
+        <div class="chat__notif" id="chat-notif">
+            <p data-i18n="chat.notif">👋 Hey! Want to know more about me?</p>
+        </div>
+
+        <!-- Chat toggle button -->
+        <button class="chat__toggle" id="chat-toggle" aria-label="Open chat">
+            <span class="chat__icon-open"><i class='bx bx-message-square-dots'></i></span>
+            <span class="chat__icon-close"><i class='bx bx-x'></i></span>
+            <span class="chat__notification" id="chat-notif-badge">1</span>
+        </button>
+
+        <!-- Chat window -->
+        <div class="chatbot" id="chatbot">
+            <div class="chatbot__header">
+                <div class="chatbot__header-left">
+                    <div class="chatbot__avatar">
+                        <img src="./assets/img/hero.png" alt="Gérard Bot">
+                        <span class="chatbot__status"></span>
+                    </div>
+                    <div>
+                        <p class="chatbot__name">Gérard AI <span class="chatbot__lang-tag" id="bot-lang-tag">EN</span>
+                        </p>
+                        <p class="chatbot__online" data-i18n="chat.online">Online</p>
+                    </div>
+                </div>
+                <div class="chatbot__header-actions">
+                    <button class="chatbot__reset" id="chatbot-reset" title="Reset chat">
+                        <i class='bx bx-refresh'></i>
+                    </button>
+                    <button class="chatbot__close" id="chatbot-close">
+                        <i class='bx bx-chevron-down'></i>
+                    </button>
+                </div>
+            </div>
+            <div class="chatbot__messages" id="chat-messages"></div>
+            <div class="chatbot__typing" id="chat-typing">
+                <span></span><span></span><span></span>
+            </div>
+            <div class="chatbot__input">
+                <span class="chat__emoji-btn" id="chat-emoji">👋</span>
+                <input type="text" id="chat-input-field" placeholder="Type your name..." class="chatbot__field">
+                <button class="chatbot__send" id="chat-send">
+                    <i class='bx bxs-send'></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- ===== CONTACT ===== -->
         <section class="contact section" id="contact">
-            <h2 class="section-title">Cantact</h2>
+            <div class="section__header">
+                <span class="section__tag" data-i18n="contact.tag">Get In Touch</span>
+                <h2 class="section__title" data-i18n="contact.title">Let's Collaborate</h2>
+            </div>
 
-            <div class="contatc__bigcontainer bd-grid">
+            <div class="contact__container container">
 
-                <div class="contact__container ">
-                    <form action="" class="contact__form">
-                        <input type="text" placeholder="Your Name" class="contact__input">
-                        <input type="mail" placeholder="Your Email Adress" class="contact__input">
-                        <textarea name="" id="" cols="0" class="contact__input" rows="10"></textarea>
+                <div class="contact__info">
+                    <p class="contact__intro" data-i18n="contact.intro">
+                        Whether you need geospatial analysis, GeoAI development, or want to collaborate on a research
+                        project — I'm open to opportunities worldwide.
+                    </p>
 
-                        <button class=" contact__button button">Send <i class='bx bxs-send'></i></button>
+                    <div class="contact__details">
+                        <a href="mailto:gerardcubakabisimwa@gmail.com" class="contact__detail">
+                            <div class="contact__detail-icon"><i class='bx bx-envelope'></i></div>
+                            <div>
+                                <span class="contact__detail-label" data-i18n="contact.email">Email</span>
+                                <span class="contact__detail-value">gerardcubakabisimwa@gmail.com</span>
+                            </div>
+                        </a>
+                        <a href="https://wa.me/243991102448" target="_blank" class="contact__detail">
+                            <div class="contact__detail-icon"><i class='bx bxl-whatsapp'></i></div>
+                            <div>
+                                <span class="contact__detail-label">WhatsApp</span>
+                                <span class="contact__detail-value">+243 991 102 448</span>
+                            </div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/g%C3%A9rard-cubaka-38a27619b/" target="_blank"
+                            class="contact__detail">
+                            <div class="contact__detail-icon"><i class='bx bxl-linkedin'></i></div>
+                            <div>
+                                <span class="contact__detail-label">LinkedIn</span>
+                                <span class="contact__detail-value">Gérard Cubaka Bisimwa</span>
+                            </div>
+                        </a>
+                        <div class="contact__detail">
+                            <div class="contact__detail-icon"><i class='bx bx-map-pin'></i></div>
+                            <div>
+                                <span class="contact__detail-label" data-i18n="contact.location">Location</span>
+                                <span class="contact__detail-value">Goma, North Kivu, DRC</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact__form-wrapper">
+                    <form class="contact__form" id="contact-form">
+                        <div class="form__row">
+                            <div class="form__group">
+                                <label class="form__label" data-i18n="form.name">Full Name</label>
+                                <input type="text" name="name" class="form__input" required placeholder="John Doe"
+                                    data-i18n-placeholder="form.name.placeholder">
+                            </div>
+                            <div class="form__group">
+                                <label class="form__label" data-i18n="form.email">Email Address</label>
+                                <input type="email" name="email" class="form__input" required
+                                    placeholder="john@example.com">
+                            </div>
+                        </div>
+                        <div class="form__group">
+                            <label class="form__label" data-i18n="form.subject">Subject</label>
+                            <input type="text" name="subject" class="form__input" required
+                                placeholder="GeoAI Collaboration" data-i18n-placeholder="form.subject.placeholder">
+                        </div>
+                        <div class="form__group">
+                            <label class="form__label" data-i18n="form.message">Message</label>
+                            <textarea name="message" rows="5" class="form__input form__textarea" required
+                                placeholder="Tell me about your project..."
+                                data-i18n-placeholder="form.message.placeholder"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn--primary form__submit" id="form-submit">
+                            <span data-i18n="form.send">Send Message</span>
+                            <i class='bx bxs-send'></i>
+                        </button>
+                        <div class="form__feedback" id="form-feedback"></div>
                     </form>
                 </div>
 
-                <div class="telephone__mobile">
-                    <a href="tel:+243991102448" class="footer__icon"><img src="./Image/Phone_iOS.png" alt=""
-                            class="tel icontac"></a>
-                    <a href="sms:+243991102448" class="footer__icon"><img src="./Image/IMessage_logo.svg.png" alt=""
-                            class="sms icontac"></a>
-                    <a href="https://wa.me/243991102448" class="footer__icon"><img src="./Image/WhatsApp.svg.png"
-                            class="whatapp icontac"></a>
-                    <span class="notificationW"><strong>1</strong></span>
-                </div>
             </div>
         </section>
 
     </main>
 
-    <!-- ===== FOOTER ==== -->
-
+    <!-- ===== FOOTER ===== -->
     <footer class="footer">
-        <p class="footer__title"><a href="#home"><h1 style="color: white;">G<span style="color: var(--mixed-color);">é</span>rard<span style="color: var(--mixed-color);">!</span></h1></a></p>
-        <p>Goma<br>North Kivu<br>Democratique Republique Of congo</p>
-        <br>
-        <p>&#169;2023 copyright all right reserved, Gérard Cubaka Bisimwa</p>
-
-        <br>
-        <div class="footer__social">
-            <a href="tel:+243991102448" class="footer__icon"><i class='bx bxs-phone-call'></i></a>
-            <a href="sms:+243991102448" class="footer__icon"><i class='bx bx-message-rounded-dots'></i></a>
-            <a href="https://www.facebook.com/gerard.cubaka.7/" class="footer__icon"><i class='bx bxl-facebook'></i></a>
-            <a href="https://www.instagram.com/gerardcubaka/" class="footer__icon"><i class='bx bxl-instagram'></i></a>
-            <a href="https://twitter.com/Cub_Ger24" class="footer__icon"><i class='bx bxl-twitter'></i></a>
-            <a href="https://www.youtube.com/watch?app=desktop&v=fBOkUh7Homc" class="footer__icon"><i
-                    class='bx bxl-youtube'></i></a>
+        <div class="footer__container container">
+            <div class="footer__top">
+                <a href="#home" class="footer__logo">
+                    G<span class="accent">é</span>rard<span class="accent">.</span>
+                </a>
+                <p class="footer__tagline" data-i18n="footer.tagline">
+                    Exploration Geologist · Remote Sensing & GeoAI Developer
+                </p>
+                <div class="footer__socials">
+                    <a href="https://www.linkedin.com/in/g%C3%A9rard-cubaka-38a27619b/" target="_blank"><i
+                            class='bx bxl-linkedin'></i></a>
+                    <a href="https://github.com/Ger-Cub/Ger-Cub" target="_blank"><i class='bx bxl-github'></i></a>
+                    <a href="https://wa.me/243991102448" target="_blank"><i class='bx bxl-whatsapp'></i></a>
+                    <a href="https://www.facebook.com/gerard.cubaka.7/" target="_blank"><i
+                            class='bx bxl-facebook'></i></a>
+                    <a href="https://www.instagram.com/gerardcubaka/" target="_blank"><i
+                            class='bx bxl-instagram'></i></a>
+                    <a href="https://twitter.com/Cub_Ger24" target="_blank"><i class='bx bxl-twitter'></i></a>
+                </div>
+            </div>
+            <div class="footer__divider"></div>
+            <div class="footer__bottom">
+                <p>© 2026 Gérard Cubaka Bisimwa — Goma, North Kivu, DRC</p>
+                <p data-i18n="footer.rights">All rights reserved.</p>
+            </div>
         </div>
-        <br>
-
-
     </footer>
 
-    <!-- ===== SCROLL REVEAL ==== -->
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <!-- ===== MAIN JS ==== -->
-    <script src="main.js"></script>
+    <!-- WhatsApp floating button -->
+    <a href="https://wa.me/243991102448" class="whatsapp__float" target="_blank" title="WhatsApp">
+        <i class='bx bxl-whatsapp'></i>
+        <span class="whatsapp__badge">1</span>
+    </a>
 
+    <!-- Scroll to top -->
+    <button class="scroll-top" id="scroll-top">
+        <i class='bx bx-up-arrow-alt'></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>
