@@ -800,7 +800,7 @@ contactForm?.addEventListener('submit', async (e) => {
 
     try {
         // Formspree endpoint — replace with your form ID
-        const FORMSPREE_ID = 'YOUR_FORMSPREE_ID'; // e.g. 'xpwzleko'
+        const FORMSPREE_ID = 'xjgjlwyk';
         const response = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
             method: 'POST',
             headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
